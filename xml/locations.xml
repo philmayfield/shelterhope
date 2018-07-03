@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="locs" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+	<object class="Location" table="locations" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="address" dbtype="varchar" precision="200" phptype="string" null="false" default="" />
+		<field key="city" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="state" dbtype="varchar" precision="2" phptype="string" null="false" default="" />
+		<field key="zip" dbtype="varchar" precision="10" phptype="string" null="false" default="" />
+		<field key="tel" dbtype="varchar" precision="14" phptype="string" null="false" default="" />
+		<field key="fax" dbtype="varchar" precision="14" phptype="string" null="false" default="" />
+		<field key="email" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="deleted" dbtype="int" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="published" dbtype="int" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+	</object>
+</model>

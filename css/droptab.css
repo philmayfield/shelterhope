@@ -1,0 +1,157 @@
+/* Menu 1 Styles */
+.menu1 {
+	font-size: 15px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.menu1:after {
+	content: '';
+	background: #FFF;
+	border-top: #CCC solid 1px;
+	display: block;
+	height: 3px;
+	position: relative;
+	top: -1px;
+	width: 100%;
+	z-index: 0;
+}
+.menu1 li {
+	background: #3d7bb3;
+	background: -moz-linear-gradient(top,  #3d7bb3 0%, #0054a0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3d7bb3), color-stop(100%,#0054a0));
+	background: -webkit-linear-gradient(top,  #3d7bb3 0%,#0054a0 100%);
+	background: -o-linear-gradient(top,  #3d7bb3 0%,#0054a0 100%);
+	background: -ms-linear-gradient(top,  #3d7bb3 0%,#0054a0 100%);
+	background: linear-gradient(to bottom,  #3d7bb3 0%,#0054a0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d7bb3', endColorstr='#0054a0',GradientType=0 );
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	display: inline-block;
+}
+.menu1.droptab-small-menu {
+	background: #BBBBBB;
+}
+.menu1.droptab-small-menu li {
+	background: none;
+	padding-left: 20px;
+}
+.menu1.droptab-small-menu li:first-of-type {
+	margin-top: 15px;
+}
+.menu1.droptab-small-menu li:last-of-type {
+	margin-bottom: 15px;
+}
+.menu1 li.active {
+	background: #FFF;
+	border-left: #CCC solid 1px;
+	border-top: #CCC solid 1px;
+	border-right: #CCC solid 1px;
+	position: relative;
+	z-index: 1;
+}
+.menu1 li + li {
+	margin-left: 5px;
+}
+.menu1 a {
+	color: #FFF;
+	display: block;
+	padding: 10px 30px 5px 30px;
+	text-decoration: none;
+}
+.menu1.droptab-small-menu a {
+	padding: 10px;
+}
+.menu1 li.active a, .menu1.droptab-small-menu li a {
+	color: #333;
+}
+
+/* Global styles (Overrides) */
+.droptab-menu a {
+	outline: none;
+}
+.droptab-small-menu {
+	border-bottom: none;
+	height: 0;
+	margin: 0;
+	overflow: hidden;
+	text-align: left;
+	-webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.droptab-small-menu.open {
+	height: auto;
+}
+.droptab-small-menu li {
+	display: block;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.droptab-small-menu li + li {
+	margin: 0;
+}
+.droptab-selector {
+	background: #AAA;
+	display: none;
+	height: 40px;
+	margin: 0;
+	position: relative;
+}
+.droptab-selector.on {
+	display: block;
+}
+.droptab-selector.open {
+
+}
+.droptab-select-current {
+	font-size: 20px;
+	line-height: 40px;
+	opacity: 1;
+	padding-left: 20px;
+}
+.droptab-select-button {
+	background: #9f9f9f;
+	cursor: pointer;
+	float: right;
+	min-height: 100%;
+	text-indent: -999em;
+	width: 40px;
+}
+.droptab-select-button:after {
+	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    width: 0;
+}
+.droptab-select-current, .droptab-select-button, .droptab-select-button:after, .menu2select, .menu3select {
+	-webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.droptab-selector.open .droptab-select-button {
+	background: #BBB;
+}
+.droptab-selector.open .droptab-select-button:after {
+    /*border-bottom: 10px solid #333;
+    border-top: none;*/
+    -moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.drop-tab-hidden {
+	opacity: 0;
+}
+textarea.code {
+	width: 100%;
+}

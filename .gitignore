@@ -1,0 +1,7 @@
+node_modules/
+deployment_files/db_connect.php
+img-pre/
+db/
+assets/
+src/*.sql
+src/*.psd
