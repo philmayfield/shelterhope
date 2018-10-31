@@ -48,7 +48,15 @@ require_once('fe_top_requirements.php');
                         ?>
                     </div>
                 </div>
-
+                <div>
+                    <h2>We are now on AmazonSmile!</h2>
+                    <div class="clearfix">
+                        <p>AmazonSmile is an easy way for you to donate simply by shopping for all the things you already purchase on Amazon!   Click the link below to set Shelter Hope as your charity of choice.  Thats it!  Amazon will donate for every dollar spent on things you already buy!</p>
+                        <p class="align-center">
+                            <a href="https://smile.amazon.com/ch/46-2376346" target="_blank"><img src="img/amazon-smile.png" alt="AmazonSmile You Shop, Amazon Donates." class="responsive-img amazon-smile"></a>
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <?php

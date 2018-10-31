@@ -1,11 +1,11 @@
-<?php 
+<?php
 require_once('fe_top_requirements.php');
 ?>
         <title>Home Page :: Shelter Hope Pet Shop</title>
         <meta name="description" content="">
     </head>
     <body>
-        
+
         <?php include_once('browsehappy.php'); ?>
 
         <?php include_once('header.php'); ?>
@@ -13,10 +13,14 @@ require_once('fe_top_requirements.php');
         <main class="clearfix col-xs-12">
             <section class="content main-content">
                 <h1>How can I donate to Shelter Hope Pet Shop?</h1>
-                
+
                 <h2 class="sh-blue-txt"><i class="fa fa-paw"></i> Donate directly to Shelter Hope</h2>
                 <p>We graciously accept donations of any amount to Shelter Hope securely via PayPal.</p>
                 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D7P25UFWWV6LQ" target="_blank">Click here to donate via PayPal</a></p>
+
+                <h2 class="sh-blue-txt"><i class="fa fa-paw"></i> Amazon Smile</h2>
+                <p>You can donate to Shelter Hope Pet Shop just by shopping on Amazon!  Click the link below to set Shelter Hope as your charity of choice.  Thats it!  Amazon will donate for every dollar spent on things you already buy!</p>
+                <p><a href="https://smile.amazon.com/ch/46-2376346" target="_blank">Click here to set us as your supported charity</a></p>
 
                 <h2 class="sh-blue-txt"><i class="fa fa-paw"></i> Amazon Wish List</h2>
                 <p>We are always in need of supplies at Shelter Hope Pet Shop, for both our 4 legged, and 2 legged friends.  You can help by purchasing items we need on a daily basis to run the pet shop.</p>
@@ -29,7 +33,7 @@ require_once('fe_top_requirements.php');
                 <h2 class="sh-blue-txt"><i class="fa fa-paw"></i> Ralphs Gives Back</h2>
                 <p>Shelter Hope is now a member of the Ralph's community contribution program!  Donating to Shelter Hope is as easy as shopping and swiping your Ralph's reward card.  Link your Ralph's rewards car to The Shelter Hope Pet Shop today!</p>
                 <p><a href="https://www.ralphs.com/topic/community-contribution-2">Click here for information and to sign up</a></p>
-                
+
                 <p>If you need a Ralph's Reward card, they are available at any Ralph's customer service desk.</p>
 
                 <h3>Once you get your card, you need to sign up online</h3>
@@ -57,18 +61,18 @@ require_once('fe_top_requirements.php');
                     <li>&ldquo;Edit my Community Contribution&rdquo; and follow the instructions</li>
                     <li>Remember to click on the circle to the left of Shelter Hope Pet Shop</li>
                 </ol>
-                
+
                 <p>If you use your phone number at the register and don't know your actual Ralph's card number, simply call 800-660-9003 to get your Rewards Card number!</p>
 
                 <p>If you don't have a computer, please ask us for a copy of the Ralph's &ldquo;Scanbar Letter&rdquo;. You can present this to the cashier when you're checking out.
 
                 <p><strong>THANK YOU FOR TAKING THE TIME TO ENROLL IN THIS VALUABLE COMMUNITY PROGRAM AT RALPH'S!!!</strong></p>
-                
+
             </section>
 
-            <?php 
+            <?php
 
-            include_once('employees.php'); 
+            include_once('employees.php');
 
             ?>
 
@@ -80,18 +84,18 @@ require_once('fe_top_requirements.php');
                 </div>
             </section>
 
-            <?php 
+            <?php
 
-            include_once('instagram_feed.php'); 
-            include_once('twitter_feed.php'); 
+            include_once('instagram_feed.php');
+            include_once('twitter_feed.php');
 
             ?>
-            
+
         </main>
 
         <?php include_once('footer.php'); ?>
 
         <?php include_once('scripts.php'); ?>
-        
+
     </body>
 </html>
