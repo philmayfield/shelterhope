@@ -77,7 +77,13 @@ input[type="text"], input[type="password"], select, textarea {
 label {
 	display: block;
 }
-input[type="text"] + label, input[type="file"] + label, textarea + label, select + label, .input-note + label, .btn.open-roxy-custom {
+input[type="text"] + label, 
+input[type="file"] + label, 
+input[type="password"] + label,
+textarea + label, 
+select + label, 
+.input-note + label, 
+.btn.open-roxy-custom {
 	margin-top: 15px;
 }
 textarea.bio {

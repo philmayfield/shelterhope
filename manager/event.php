@@ -17,8 +17,8 @@ if($e){
 	$event = $eventStmt->fetch(PDO::FETCH_OBJ);
 }
 
-$allLocstmt = $conn->prepare('SELECT * FROM locations ORDER BY :order ASC');
-$allLocstmt->execute(array('order' => 'name'));
+$allLocstmt = $conn->prepare('SELECT * FROM locations WHERE id = :id ORDER BY :order ASC');
+$allLocstmt->execute(array('id' => 1, 'order' => 'name'));
 
 ?>
 
@@ -60,7 +60,8 @@ $allLocstmt->execute(array('order' => 'name'));
 								<?php
 								while($row = $allLocstmt->fetch(PDO::FETCH_OBJ)) {
 								    echo '<option value="'.$row->id.'"';
-								    if($row->id == $event->location){
+								    // if($row->id == $event->location){
+									if($row->id == 1){
 								    	echo ' selected="selected"';
 								    }
 								    echo '>'.$row->name.'</option>';

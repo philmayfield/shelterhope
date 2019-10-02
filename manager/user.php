@@ -54,8 +54,7 @@ $getEmpStmt->execute();
 							<label for="login">Login</label>
 							<input type="text" id="login" name="login" class="item" value="<?php echo $getUser->login; ?>" required>
 							<label for="password">Password</label>
-							<input type="text" id="password" name="password" class="item" value="<?php echo $getUser->password; ?>" required>
-							<div class="input-note">Not worrying too much about privacy here, if we want to hide cleartext passwords, let me know. -Phil</div>
+							<input type="password" id="password" name="password" class="item" value="<?php echo $getUser->password; ?>" required>
 							<label for="is_employee">Is Employee?</label>
 							<select name="is_employee" id="is_employee" class="item" required>
 								<option value="0" <?php if($getUser->is_employee == 0 || $getUser->is_employee == ''){echo 'selected="selected"';} ?>>No - Admin</option>

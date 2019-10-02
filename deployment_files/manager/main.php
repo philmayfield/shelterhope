@@ -9,12 +9,14 @@ if($user_access == 0){
 	// super user
 
 	// super user gets access to all locations
-	$locstmt = $conn->prepare('SELECT * FROM locations ORDER BY name ASC');
-	$locstmt->execute();
+	// $locstmt = $conn->prepare('SELECT * FROM locations ORDER BY name ASC');
+	$locstmt = $conn->prepare('SELECT * FROM locations WHERE id = :id ORDER BY name ASC');
+	$locstmt->execute(array('id' => 1));
 
-	if(!empty($_GET['l'])){
-		$loc = $_GET['l'];
-	}
+	// if(!empty($_GET['l'])){
+	// 	$loc = $_GET['l'];
+	// }
+	$loc = 1;
 } else {
 	if($user_is_employee){
 		// employee
@@ -59,7 +61,7 @@ if($count == 1){
 
 				<h2>Manager - Main Content</h2>
 				
-				<div class="row margin-bottom-15 <?php if($user_access != 0){ echo 'hidden'; } ?>">
+				<div class="row margin-bottom-15 hidden <?php if($user_access != 0){ echo 'hidden'; } ?>">
 					<div class="col-xs-12 col-md-4">
 						<form action="main.php" method="get" enctype="multipart/form-data">
 							<label for="main-content-select">Choose a location:</label>
@@ -81,7 +83,8 @@ if($count == 1){
 						</form>
 					</div>
 					<div class="col-xs-12 col-md-4">
-						<a href="../<?php echo $web_name; ?>" class="btn btn-tight margin-top-15 inactive" id="follow-btn" target="_blank">Launch Site</a>
+						<!-- <a href="http://www.philmayfield.com/shelterhope/<?php echo $web_name; ?>" class="btn btn-tight margin-top-15 inactive" id="follow-btn" target="_blank">Launch Site</a> -->
+						<a href="http://www.shelterhopepetshop.org" class="btn btn-tight margin-top-15 inactive" id="follow-btn" target="_blank">Launch Site</a>
 					</div>
 				</div>
 

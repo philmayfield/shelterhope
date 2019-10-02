@@ -9,12 +9,14 @@ if($user_access == 0){
 	// super user
 
 	// super user gets access to all locations
-	$locstmt = $conn->prepare('SELECT * FROM locations ORDER BY name ASC');
-	$locstmt->execute();
+	// $locstmt = $conn->prepare('SELECT * FROM locations ORDER BY name ASC');
+	$locstmt = $conn->prepare('SELECT * FROM locations WHERE id = :id ORDER BY name ASC');
+	$locstmt->execute(array('id' => 1));
 
-	if(!empty($_GET['l'])){
-		$loc = $_GET['l'];
-	}
+	// if(!empty($_GET['l'])){
+	// 	$loc = $_GET['l'];
+	// }
+	$loc = 1;
 } else {
 	if($user_is_employee){
 		// employee

@@ -3,8 +3,10 @@ require_once('fe_top_requirements.php');
 
 $get_locs = $conn->prepare('SELECT * FROM locations ORDER BY name ASC');
 $get_locs->execute();
+
+$mapsApiKey = "AIzaSyCL_ydsjO3sthk6lNU2errdRe_erGpNttg";
 ?>
-        <title>Our Locations :: Shelter Hope Pet Shop</title>
+        <title>Our Location :: Shelter Hope Pet Shop</title>
         <meta name="description" content="Are you looking for a humane pet rescue in your area?  Shelter Hope Pet Shop locations.">
     </head>
     <body>
@@ -15,11 +17,11 @@ $get_locs->execute();
 
         <main class="clearfix col-xs-12">
             <section class="content main-content">
-                <h1>Shelter Pet Hope Shop Locations</h1>
+                <h1>Shelter Pet Hope Shop Location</h1>
 
                 <?php
                 while($location = $get_locs->fetch(PDO::FETCH_OBJ)){
-                    if($location->id == 999){
+                    if($location->id == 999 || $location->published == 0){
                         continue;
                     }
                     $as = str_replace('#', '', $location->address).', '.$location->city.', '.$location->state.' '.$location->zip;
@@ -30,9 +32,9 @@ $get_locs->execute();
                                 <div class="name bold">
                                     Shelter Hope Pet Shop <?php echo $location->name;?>
                                 </div>
-                                <div class="website">
+                                <!-- <div class="website">
                                     <a href="<?php echo $location->web_name;?>">shelterhopepetshop.org/<?php echo $location->web_name;?></a>
-                                </div>
+                                </div> -->
                                 <div class="street-address">
                                     <?php echo $location->address;?>
                                 </div>
@@ -62,7 +64,7 @@ $get_locs->execute();
                             <?php } ?>
                         </div>
                         <div class="col-xs-12 col-md-5 align-center">
-                            <a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo urlencode($as); ?>" target="_blank" title="Click map for directions to Shelter Hope <?php echo $location->name;?> using Google Maps"><img class="responsive-img sh-blue-shadow" src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo urlencode($as); ?>&zoom=14&size=400x200&markers=color:0x9F3ED5%7Clabel:S%7C<?php echo urlencode($as); ?>" alt="Shelter Hope Pet Shop <?php echo $location->name;?>"></a>
+                            <a href="https://maps.google.com?saddr=Current+Location&daddr=<?php echo urlencode($as); ?>" target="_blank" title="Click map for directions to Shelter Hope <?php echo $location->name;?> using Google Maps"><img class="responsive-img sh-blue-shadow" src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo urlencode($as); ?>&zoom=14&size=400x200&markers=color:0x9F3ED5%7Clabel:S%7C<?php echo urlencode($as); ?>&key=<?php echo urlencode($mapsApiKey) ?>" alt="Shelter Hope Pet Shop <?php echo $location->name;?>"></a>
                             <!-- <iframe class="sh-blue-shadow" width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAalnkqQ-0Dcyf7MI-hqgnthVi_1MBZqD8&q=<?php echo urlencode($as);?>"></iframe> -->
                         </div>
                     </div>
